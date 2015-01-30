@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<button id="editBtn" ng-click="setEditing()">{{buttonText}}</button>
+	<form name="detailsForm">
+		<div class="row">
+			<h1 class="col-md-12" ng-class="{ hidden:isEditing}">{{contact.firstname}} {{contact.lastname}}</h1>
+		</div>
+		<div class="row" ng-class="{ hidden:!isEditing}">
+			<input class="title-input col-md-6" type="text" ng-model="contact.firstname" ng-disabled="!isEditing">
+			<input class="title-input col-md-6" type="text" ng-model="contact.lastname" ng-disabled="!isEditing">
+		</div>
+		<div class="row">
+			<p><label class="col-md-1">Phone:</label><input class="col-md-11" type="tel" ng-model="contact.phone" format="telephone" max="10" ng-disabled="!isEditing"></p>
+			<p><label class="col-md-1">Email:</label> <input class="col-md-11" type="email" ng-model="contact.email" ng-disabled="!isEditing"></p>
+			<p><label class="col-md-1">Address:</label> <input class="col-md-11" type="text" ng-model="contact.address" ng-disabled="!isEditing"></p>
+		</div>
+	</form>
+</div>

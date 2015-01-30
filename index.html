@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html ng-app="contacts">
+<head>
+	<title>Change Heroes</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.min.css">
+</head>
+<body>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+	<script type="text/javascript" src="assets/javascript/contacts.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/details.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/controllers.js"></script>
+
+	<div ng-controller="ContactController as names">
+		<div id="name-list">
+			<h2 id="list-title">All Contacts</h2>
+			<search-form></search-form>
+		</div>
+		<div id="contact-detail" ng-view></div>
+	</div>
+	
+</body>
+</html>

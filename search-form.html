@@ -1,0 +1,8 @@
+<form name="searchForm">
+	<input type="text" placeholder="Search" ng-model="searchCtrl.searchString" title="search"><span class="glyphicon glyphicon-remove" ng-hide="searchCtrl.isEmpty()" ng-click="searchCtrl.clearSearch()"></span>
+			<ul>
+	<li ng-repeat="name in names.names | orderBy:'-lastname':true" ng-class="{ active:names.isSet(name)}" ng-show="searchCtrl.searchName(name.firstname + name.lastname)">
+		<a href="#/contact/{{name.firstname}}&{{name.lastname}}" ng-click="names.setName(name)">{{name.firstname}} {{name.lastname}}</a>
+	</li>
+</ul>
+</form>
