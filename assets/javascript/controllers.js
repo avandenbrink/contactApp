@@ -7,9 +7,10 @@
 		var list = this;
 		list.names = [ ];
 		$rootScope.focus = [ ];
-
+		
 		//collect data
 		$http.get('contacts.JSON').success(function(data) { list.names = data['contacts']; $rootScope.names = list.names; });
+
 	}]);
 
 	app.directive('searchForm', function() {
@@ -41,6 +42,18 @@
 
 				this.clearSearch = function() {
 					this.searchString = "";
+				}
+
+				this.activeName = [ ];
+				this.isSet = function(name) {
+					if (this.activeName == name) {
+						return true;
+					}
+					return false;
+				}
+				this.setName = function(name) {
+					console.log("clicked");
+					this.activeName = name;
 				}
 			}
 		}

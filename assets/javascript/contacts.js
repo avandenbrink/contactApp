@@ -1,5 +1,5 @@
 (function(angular) {
-	var app = angular.module('contacts', ['details', 'ngRoute', 'controllers']);
+	var app = angular.module('contacts', ['ngRoute', 'controllers']);
 
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	  $routeProvider
