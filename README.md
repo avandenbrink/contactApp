@@ -1,6 +1,8 @@
 Project: Contacts App for Change Heroes.
-Author: Aaron VandenBrink 
-Date: Jan 30, 2015
+
+Author: Aaron VandenBrink
+
+Date: Jan 30, 2015 
 
 Process:
 
